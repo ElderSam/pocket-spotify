@@ -7,7 +7,40 @@ import CategoryItem from './CategoryItem';
 
 import './Categories.scss';
 
-const Categories = ({ data, isLoading, url }) => (<div className="categories" />);
+const Categories = ({ data, isLoading, url }) => (
+    <div className="categories" data-testid="categories">
+        <div className="container">
+            <h3 className="categories__title">Categorias</h3>
+
+            {isLoading
+                ? (<Loading text="Carregando..." />)
+                : (
+                    <div className="categories__content">
+                        {data.length && data.map(category => (
+                            <CategoryItem
+                                icon={category.icons[0]}
+                                id={category.id}
+                                key={category.id} /*para o React identificar*/
+                                name={category.name}
+                                url={url}
+                            />
+                        ))}
+                    </div>
+                )
+            }
+        </div>
+    </div>
+);
+
+Categories.defaultProps = { //valores padrões
+    isLoading: false, 
+}
+
+Categories.propTypes = { //tipos obrigatórios
+    data: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool,
+    url: PropTypes.string.isRequired,
+}
 
 export default Categories;
 
