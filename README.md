@@ -1,5 +1,9 @@
 # React / Redux Spotify Pocket SPA
 
+Desafio do Bootcamp React;
+    para testar abra o terminal e dê o comando;
+        npm start
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3194f71c-2da4-4146-b1ba-3c14e024ec2f/deploy-status)](https://app.netlify.com/sites/viniciusvinna-react-pocket-spotify/deploys)
 ## Objetivo:
 Neste último desafio você aplicará todo o conhecimento adquirido durante o curso e terá que desenvolver uma versão _**pocket**_ do Spotify, integrada a [Web API](https://developer.spotify.com/documentation/web-api) oficial, utilizando `fluxo implícito de concessão` (Implicit Grant Flow) para realizar a autenticação do usuário, permite que ele acesse rotas privadas dentro da aplicação.
